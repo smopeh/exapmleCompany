@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+nav {
+  position: relative;
+  border-bottom: 1px solid red;
+  height: 8vh;
+}
+nav button {
+  display: inline-flex;
+  position: absolute;
+  top: 1.1vh;
+  right: 0;
+  align-content: center;
+  justify-content: center;
+  color: grey;
+  font-size: 50px;
+  line-height: 50px;
+  height: 60px;
+  width: 60px;
+}
+nav img {
+  height: 100%;
+  width: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+#headImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60vh;
+  background-image: url("https://www.projinvest-services.com/wp-content/uploads/2024/11/s-attaquer-au-marche-francais-1.jpg");
+  background-size: cover;
+}
+#headImage h1, #headImage h5 {
+  color: white;
+  font-family: "Lexend Giga";
+}
+#products {
+  height: 50vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 20vh);
+  grid-template-rows: 20vh;
+  gap: 40px;
+  background-image: linear-gradient(to bottom right, lightgrey, white);
+}
+#item1, #item2, #item3, #item4 {
+  text-align: center;
+  line-height: 20vh;
+  background-color: white;
+  border: 1px solid black;
+}
+#staff {
+  display: grid;
+  grid-template-areas: 
+    "member1 member2 member3";
+  justify-content: space-around;
+  background-image: linear-gradient(to right, lightgreen, white);
+}
+.staff {
+  height: 10vh;
+  width: 30vh;
+  line-height: 10vh;
+  text-align: center;
+  border: 1px solid black;
+  background-color: lightgrey;
+  margin: 2vh 0;
+}
+#staff #staff1 {
+  grid-area: "member1";
+}
+#staff #staff2 {
+  grid-area: "member2";
+}
+#staff #staff3 {
+  grid-area: "member3";
+}
+
+@media only screen and (max-width: 960px) {
+  #products {
+  grid-template-columns: 20vh 20vh;
+  grid-template-rows: 20vh 20vh;
+  gap: 40px;
+  }
+  .staff {
+  width: 15vh;
+}
+
+@media only screen and (max-width: 480px) {
+  #headImage {
+    text-align: center;
+  }
+  #products {
+    grid-template-columns: 20vh;
+    grid-template-rows: repeat(4, 10vh);
+    gap: 15px;
+  }
+  #item1, #item2, #item3, #item4 {
+    line-height: 10vh; 
+    }
+  #staff {
+    grid-template-areas: 
+      "member1"
+      "member2"
+      "member3";
+    gap: 2vh;
+  }
+}
