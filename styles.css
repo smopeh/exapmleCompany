@@ -50,6 +50,7 @@ nav img {
   grid-template-rows: 20vh;
   gap: 40px;
   background-image: linear-gradient(to bottom right, lightgrey, white);
+  overflow: scroll;
 }
 #item1, #item2, #item3, #item4 {
   text-align: center;
@@ -63,6 +64,7 @@ nav img {
     "member1 member2 member3";
   justify-content: space-around;
   background-image: linear-gradient(to right, lightgreen, white);
+  overflow: scroll;
 }
 .staff {
   height: 10vh;
